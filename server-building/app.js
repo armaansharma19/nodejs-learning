@@ -6,11 +6,12 @@ const server=http.createServer((req,res)=>{
     //res.setHeader() is used to set an HTTP response header before sending the body.
     res.write('<html>');
     res.write('<head>');
+    res.write('</head>');
     res.write('<body>');
     res.write('<h1>Hello Guys</h1>');
     res.write('</h1>');
     res.write('</body>');
-    res.write('</head>');
+    res.write('</html>');
     //res.write is used to send chunk of response body to the client
 })
 
