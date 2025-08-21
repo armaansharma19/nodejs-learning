@@ -6,7 +6,7 @@ const route=express.Router();
 
 route.use(express.urlencoded({extended:false}));
 
-route.get('/add-products',(req,res,next)=>{
+route.use('/add-products',(req,res,next)=>{
     res.sendFile(path.join(__dirname,'../views','addproduct.html'));
 })
 
