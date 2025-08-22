@@ -1,11 +1,13 @@
 const express=require('express');
 
-const adminRoute=require('./routes/admin.js')
+const adminData=require('./routes/admin.js')
 const shopRoute=require('./routes/shop.js')
 const app=express();
 
+app.set('view engine','pug');
+app.set('views','views')//to set the templating engine folder (it is set to /views by default)
 
-app.use(adminRoute);
+app.use(adminData.routes);
 app.use(shopRoute);
 
 
